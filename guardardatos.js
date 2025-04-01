@@ -3,8 +3,8 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 // Configuración
-const SUPABASE_URL = 'https://flnyhuhbhkbbalwrouer.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZsbnlodWhiaGtiYmFsd3JvdWVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI5NDA1ODEsImV4cCI6MjA1ODUxNjU4MX0.ZHfR3eBg6I0z4rHoewzdNl6G1307ovn_qAoxLFj4HhM';
+const SUPABASE_URL = 'https://ibgomcgcxxntvcgxrtqv.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImliZ29tY2djeHhudHZjZ3hydHF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI5NDEyNTcsImV4cCI6MjA1ODUxNzI1N30.qdCrovV1vhKfLc7zSdfsyDFaEMlAcixDmqA3GOCeNuk';
 
 // Datos de los nuevos usuarios a insertar
 const nuevosUsuarios = [
