@@ -4,36 +4,18 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 
 // Configuración
 const SUPABASE_URL = 'https://ibgomcgcxxntvcgxrtqv.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImliZ29tY2djeHhudHZjZ3hydHF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI5NDEyNTcsImV4cCI6MjA1ODUxNzI1N30.qdCrovV1vhKfLc7zSdfsyDFaEMlAcixDmqA3GOCeNuk';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImliZ29tY2djeHhudHZjZ3hydHF2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0Mjk0MTI1NywiZXhwIjoyMDU4NTE3MjU3fQ.Jn3oaxc0o46clPXSkmvvDX875U-v-ZZ5FAxQhW2m00Q';
 
 // Datos de los nuevos usuarios a insertar
 const nuevosUsuarios = [
   {
-    identificacion: 11122554,
-    nombre_usuario: "diana ramirez",
-    clave_encriptada: "diana.fontecha",
-    usuario_normal: 1,
-    usuario_administrador: 1,
-    usuario_superadministrador: 1,
-    email: "diana.fontecha@gmail.com"
-  },
-  {
-    identificacion: 8885544,
-    nombre_usuario: "Camilo ruiz ",
-    clave_encriptada: "camilodj45$$",
-    usuario_normal: 1,
-    usuario_administrador: 0,
-    usuario_superadministrador: 1,
-    email: "camiloruiz@gmail.com"
-  },
-  {
-    identificacion: 1079035341,
-    nombre_usuario: "Juan Pablo Caro ",
-    clave_encriptada: "juanPablo12",
-    usuario_normal: 1,
-    usuario_administrador: 1,
-    usuario_superadministrador: 2,
-    email: "juanpablo@gmail.com"
+    Identificacion: 1027525168,
+    Nombre_Usuario: "Francisco Contreras",
+    Clave_Encriptada: "sdfghjkl",
+    Usuario_Normal: 1,
+    Usuario_Administrador: 0,
+    Usuario_Superadministrador: 0,
+    email: "consrtas@gmail.com"
   }
 ];
 
