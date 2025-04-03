@@ -49,6 +49,25 @@
     button:hover {
       background-color: #8e24aa;
     }
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -57,7 +76,7 @@
   <table id="userTable">
     <thead>
       <tr>
-        <th>Identificacion</th>
+        <th>Identificación</th>
         <th>Nombre</th>
         <th>Email</th>
       </tr>
@@ -67,42 +86,34 @@
     </tbody>
   </table>
 
-  <script>
-    // URL y clave de la API de Supabase
-    const SUPABASE_URL = 'https://ibgomcgcxxntvcgxrtqv.supabase.co';
-    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImliZ29tY2djeHhudHZjZ3hydHF2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0Mjk0MTI1NywiZXhwIjoyMDU4NTE3MjU3fQ.Jn3oaxc0o46clPXSkmvvDX875U-v-ZZ5FAxQhW2m00Q';
+  <h1>Registrar Usuario</h1>
+  <form id="registerForm">
+    <label for="identificacion">Identificación:</label>
+    <input type="text" id="identificacion" required>
+    
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    
+    <label for="clave">Clave:</label>
+    <input type="password" id="clave" required>
+    
+    <button type="submit">Registrar</button>
+  </form>
 
-    // Función para cargar los datos de los usuarios
-    async function loadUserData() {
-      const response = await fetch(`${SUPABASE_URL}/rest/v1/usuarios?select=*`, {
-        headers: {
-          'apikey': SUPABASE_KEY,
-          'Authorization': `Bearer ${SUPABASE_KEY}`
-        }
-      });
+  <h1>Iniciar Sesión</h1>
+  <form id="loginForm">
+    <label for="loginIdentificacion">Identificación:</label>
+    <input type="text" id="loginIdentificacion" required>
 
-      if (!response.ok) {
-        alert('Error al obtener los datos de los usuarios');
-        return;
-      }
+    <label for="loginPassword">Contraseña:</label>
+    <input type="password" id="loginPassword" required>
 
-      const users = await response.json();
-      const tableBody = document.querySelector('#userTable tbody');
-      tableBody.innerHTML = '';  // Limpiar la tabla antes de agregar nuevos datos
+    <button type="submit">Iniciar sesión</button>
+  </form>
 
-      users.forEach(user => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td>${user.Identificacion}</td>
-          <td>${user.Nombre_Usuario}</td>
-          <td>${user.email}</td>
-        `;
-        tableBody.appendChild(row);
-      });
-    }
-
-    // Event listener para cargar los datos cuando el botón sea presionado
-    document.getElementById('loadButton').addEventListener('click', loadUserData);
-  </script>
+  <script src="savdat.js"></script>
 </body>
 </html>
